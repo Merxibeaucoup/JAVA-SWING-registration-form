@@ -152,7 +152,7 @@ public class RegistrationForm extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				try {
 					Class.forName("org.postgresql.Driver");
-					Connection con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/lib","edgarbriandt","Rhodaline@1");
+					Connection con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/lib","<username>","<password>");
 					
 					String query = "insert into registration values(?,?,?,?,?,?,?,?)";
 					PreparedStatement pst = con.prepareStatement(query);
